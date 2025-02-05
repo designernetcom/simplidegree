@@ -15987,7 +15987,7 @@ li::marker {
 }
 
 .collegeleft {
-  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .td_section_title {
@@ -16026,7 +16026,7 @@ li::marker {
   }
 
   .collegeleft {
-    margin-right: 0px;
+    margin-left: 0px;
   }
 }
 
