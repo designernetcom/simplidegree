@@ -8554,7 +8554,7 @@ html .ui-button.ui-state-disabled:active {
     height: inherit;
     align-items: center;
     /* font-weight: 500; */
-    font-size: 15px;
+    font-size: 14px;
     z-index: 1;
   }
 
@@ -15621,11 +15621,11 @@ button.td_icon_btn:hover {
 }
 
 .td_top_header_right a {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .td_header_contact_list span {
-  font-size: 15px;
+  font-size: 13px;
   /* color: #0d2638; */
 }
 
@@ -15636,7 +15636,7 @@ button.td_icon_btn:hover {
 @media (max-width: 1400px) {
   .td_header_dropdown_btn {
     padding: 9px 10px;
-    font-size: 15px;
+    font-size: 13px;
 
   }
 
@@ -15667,7 +15667,7 @@ button.td_icon_btn:hover {
 
 .td_iconbox_title {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   /* margin-top: 10px; */
 }
 
