@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Compare</title>
+    <style>
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+        .compare-section {
+            border: 2px dashed #333;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Products</h2>
+    <div id="product-list">
+        <div class="product-card" data-id="1" data-name="Product A" data-price="$100">
+            <h3>Product A</h3>
+            <p>Price: $100</p>
+            <button onclick="addToCompare(1, 'Product A', '$100')">Compare</button>
+        </div>
+
+        <div class="product-card" data-id="2" data-name="Product B" data-price="$150">
+            <h3>Product B</h3>
+            <p>Price: $150</p>
+            <button onclick="addToCompare(2, 'Product B', '$150')">Compare</button>
+        </div>
+
+        <div class="product-card" data-id="3" data-name="Product C" data-price="$200">
+            <h3>Product C</h3>
+            <p>Price: $200</p>
+            <button onclick="addToCompare(3, 'Product C', '$200')">Compare</button>
+        </div>
+    </div>
+
+    <h2>Compare Products</h2>
+    <div id="compare-section" class="compare-section">
+        <p>No products added for comparison.</p>
+    </div>
+
+    <script>
+        let comparedProducts = [];
+
+        function addToCompare(id, name, price) {
+            if (comparedProducts.some(product => product.id === id)) {
+                alert("Product already added for comparison!");
+                return;
+            }
+
+            if (comparedProducts.length >= 3) {
+                alert("You can only compare up to 3 products!");
+                return;
+            }
+
+            comparedProducts.push({ id, name, price });
+            renderCompareSection();
+        }
+
+        function removeFromCompare(id) {
+            comparedProducts = comparedProducts.filter(product => product.id !== id);
+            renderCompareSection();
+        }
+
+        function renderCompareSection() {
+            const compareSection = document.getElementById("compare-section");
+
+            if (comparedProducts.length === 0) {
+                compareSection.innerHTML = "<p>No products added for comparison.</p>";
+                return;
+            }
+
+            compareSection.innerHTML = comparedProducts
+                .map(product => `
+                    <div class="product-card">
+                        <h3>${product.name}</h3>
+                        <p>Price: ${product.price}</p>
+                        <button onclick="removeFromCompare(${product.id})">Remove</button>
+                    </div>
+                `)
+                .join("");
+        }
+    </script>
+
+</body>
+</html>

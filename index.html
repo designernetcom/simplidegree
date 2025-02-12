@@ -55,6 +55,121 @@
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    
+.title{
+    text-align: center;
+    text-transform: capitalize;
+    color: #726a95;
+    margin: 10px 0;
+    position: relative;
+}
+
+.title::after{
+    content: "";
+    position: absolute;
+    width: 20%; height: 2px;
+    background-image: linear-gradient(to left, transparent 5%, #726a95);
+    bottom: -10px; left: 50%;
+    transform: translate(-50%);
+}
+
+.team-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.member{
+    flex: 1 1 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    max-width: 300px;
+    transition: all 0.3s;
+}
+
+.member:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-20px);
+}
+
+.member img{
+    display: block;
+    width: 150px; height: 150px;
+    object-fit: cover;
+    border:4px solid #726a95;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.member h2{
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #726a95;
+    margin: 15px 0;
+}
+
+.member p{
+    font-size: 15px;
+    color: #838383;
+    line-height: 1.6;
+}
+
+.team-card img {
+    width: 120px; /* Reduce image width */
+    height: 220px; /* Reduce image height */
+    object-fit: cover; /* Maintain aspect ratio and crop excess */
+   
+    margin: 0 auto 10px; /* Center align */
+    display: block;
+}
+
+.live-button {
+            display: flex;
+            align-items: center;
+            background: red;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .live-button::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            100% {
+                box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+            }
+        }
+
+        .live-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7);
+        }
+
+        
+
+  </style>
 </head>
 
 <body class="td_theme_2">
@@ -101,7 +216,8 @@
         <div class="td_main_header_in">
           <div class="td_main_header_left">
             <a class="td_site_branding" href="index.html">
-              <img src="assets/img/logo.png" alt="Logo">
+              <img src="assets/img/Simplidegree logo 10 years.png" alt="Logo">
+              <!-- <span  style="color:#000;">10 </span> years -->
             </a>
             <div class="td_header_category_wrap position-relative">
               <button class="td_header_dropdown_btn td_medium td_heading_color">
@@ -148,7 +264,7 @@
                       </ul>
                     </li>
                     <li>
-                      <a href="college-finder.html">College Finder <a href="college-finder.html" class="aibased">AI Based</a> </a> 
+                      <a href="#">College Finder <a href="#" class="aibased">AI Based</a> </a> 
 
                     </li>
                     <li><a href="free-counselling.html"><span href="free-counselling.html" class="videoicon"><i class="fa-regular fa-video"></i> </span> Free Counselling</a></li>
@@ -188,6 +304,7 @@
       </div>
     </div>
   </header>
+
 
 
 
@@ -325,12 +442,12 @@
         
                 <div class="numboxes main-b">
                   <div class="numboxes">
-                    <div class="item">1</div>
+                    <div class="item">6</div>
                     <div class="item">0</div>
                     <div class="item">0</div>
                     <div class="item">0</div>
                     <div class="item">0</div>
-                    <div class="item">0</div> 
+                    
                   </div>
                  
                   <div class="stuc">Students Counselled</div>
@@ -359,7 +476,7 @@
               <div class="td_hero_img wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s"><img
                   src="assets/img/b1.png" alt=""></div>
               <div class="td_hero_text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.35s">
-        
+                 <button class="live-button" style="float: right;">Live</button>
                 <h1 class="td_hero_title td_white_color td_fs_64 td_mb_24">Study Hard, Shine Bright – <span
                     class="texthindi">Kal Ko Banaye Behtar Aaj Se!</span> </h1>
                 <p class="td_hero_subtitle td_fs_18 td_white_color td_opacity_7 td_mb_30">Your dedication and effort will shape
@@ -374,12 +491,12 @@
         
                 <div class="numboxes main-b">
                   <div class="numboxes">
-                    <div class="item">1</div>
+                    <div class="item">6</div>
                     <div class="item">0</div>
                     <div class="item">0</div>
                     <div class="item">0</div>
                     <div class="item">0</div>
-                    <div class="item">0</div> 
+                  
                   </div>
                  
                   <div class="stuc">Students Counselled</div>
@@ -411,7 +528,7 @@
               <div class="td_hero_img wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s"><img
                   src="assets/img/b4.png" alt=""></div>
               <div class="td_hero_text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.35s">
-        
+                  <button class="live-button" style="float: right;">Live</button>
                 <h1 class="td_hero_title td_white_color td_fs_64 td_mb_24">10 Years of Excellence – <span
                     class="texthindi">Vishwas Ka Dus Saal Ka Safar!</span> </h1>
                 <p class="td_hero_subtitle td_fs_18 td_white_color td_opacity_7 td_mb_30">A decade of trust, quality, and commitment in shaping bright futures. Join us and be a part of our legacy!</p>
@@ -424,12 +541,12 @@
         
                 <div class="numboxes main-b">
                   <div class="numboxes">
-                    <div class="item">5</div>
-                    <div class="item">2</div>
-                    <div class="item">8</div>
-                    <div class="item">2</div>
-                    <div class="item">1</div>
-                    <div class="item">3</div> 
+                    <div class="item">6</div>
+                    <div class="item">0</div>
+                    <div class="item">0</div>
+                    <div class="item">0</div>
+                    <div class="item">0</div>
+                   
                   </div>
                  
                   <div class="stuc">Students Counselled</div>
@@ -461,7 +578,7 @@
               <div class="td_hero_img wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s"><img
                   src="assets/img/b3.png" alt=""></div>
               <div class="td_hero_text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.35s">
-        
+                  <button class="live-button" style="float: right;">Live</button>
                 <h1 class="td_hero_title td_white_color td_fs_64 td_mb_24">All Colleges, One Destination – <span
                     class="texthindi">Har College Ka Admission Yahan Milega!</span> </h1>
                 <p class="td_hero_subtitle td_fs_18 td_white_color td_opacity_7 td_mb_30">Your dedication and effort will shape
@@ -956,7 +1073,7 @@
                       </li>
                     </ul>
                     <h2 class="td_card_title td_fs_24 td_semibold td_mb_12"><a href="">
-                        MBA In Human Resource Management – NMIMS</a></h2>
+                        2 years Online MBA – NMIMS</a></h2>
                     <p>1,68,000/- For 2 Years <br>
 
                       Approved / Recognized By: UGC / DEB</p>
@@ -996,7 +1113,7 @@
                       </li>
                     </ul>
                     <h2 class="td_card_title td_fs_24 td_semibold td_mb_12"><a href="">
-                        Online MBA In Digital Marketing – Amity University Online</a></h2>
+                        2 years Online MBA– Amity University Online</a></h2>
                     <p>2,55,000/- For 2 Years <br>
 
                       Approved / Recognized By: UGC
@@ -1023,7 +1140,7 @@
                 <div class="td_card td_style_5 td_type_1">
                   <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="" class="td_card_thumb">
                     <span class="td_card_thumb_in">
-                      <img src="assets/img/mba-distance/dpu.jpg" alt="">
+                      <img src="assets/img/mba-distance/dy-patil.jpg" alt="">
 
                     </span>
                   </a>
@@ -1036,8 +1153,8 @@
                       </li>
                     </ul>
                     <h2 class="td_card_title td_fs_24 td_semibold td_mb_12"><a href="">
-                        Online MBA In I.T <br>
-                        Management – DPU</a></h2>
+                        2 years Online MBA <br>
+               – DPU</a></h2>
                     <p>1,67,200/- For 2 Years <br>
 
                       Approved / Recognized By: UGC / DEB</p>
@@ -1075,8 +1192,8 @@
                       </li>
                     </ul>
                     <h2 class="td_card_title td_fs_24 td_semibold td_mb_12"><a href="">
-                        Online MBA In IT & <br>
-                        Fintech – Manipal</a></h2>
+                        2 years Online MBA <br>
+                         – Manipal</a></h2>
                     <p>1,50,000/- For 2 Years <br>
 
                       Approved / Recognized By: UGC</p>
@@ -1114,7 +1231,7 @@
                       </li>
                     </ul>
                     <h2 class="td_card_title td_fs_24 td_semibold td_mb_12"><a href="">
-                        Online MBA In Data Science – LPU Online
+                        2 years Online MBA  – LPU Online
 
                       </a></h2>
                     <p>2,60,000/- For 2 Years <br>
@@ -1155,7 +1272,7 @@
                       </li>
                     </ul>
                     <h2 class="td_card_title td_fs_24 td_semibold td_mb_12"><a href="">
-                        Online Master In Business Administration In Finance – SSODL</a></h2>
+                        2 years Online MBA – SSODL</a></h2>
                     <p>3,00,000/- For 2 Years <br>
 
                       Approved / Recognized By: UGC/AICTE</p>
@@ -1214,7 +1331,7 @@
 
           <div class="td_height_50 td_height_lg_40"></div>
   </section>
-
+ 
   <section class="td_heading_bg td_shape_section_9 certificates">
     <div class="td_shape_position_3 position-absolute"></div>
     <div class="td_height_50 td_height_lg_45"></div>
@@ -1280,86 +1397,187 @@
     <div class="td_height_50 td_height_lg_40"></div>
   </section>
 
-
-
-
- 
-  <section class="td_shape_section_8 td_hobble">
-    <div class="td_shape_position_1 position-absolute td_hover_layer_3">
-      <img src="assets/img/home_2/team_shape_1.svg" alt="">
-    </div>
-    <div class="td_shape_position_2 position-absolute td_hover_layer_3">
-      <img src="assets/img/home_2/team_shape_2.svg" alt="">
-    </div>
-    <div class="td_height_60 td_height_lg_45"></div>
+ <section class="td_gray_bg_4 home-courses">
+    <div class="td_height_10 "></div>
     <div class="container">
-      <div class="td_section_heading td_style_1 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-        <p class="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color">
-          <i></i>
-          Our Expert Counseller
-          <i></i>
-        </p>
-        <h2 class="td_section_title td_fs_48 mb-0">Top-Tier Counseller at Your Service</h2>
-        <p class="td_section_subtitle td_fs_18 mb-0">Our instructors are accomplished individuals who have made
-          significant contributions to their fields, whether it’s technology, business, design, or marketing.</p>
-      </div>
-      <div class="td_height_50 td_height_lg_50"></div>
-      <div class="row td_gap_y_30">
-        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="td_team td_style_1 text-center position-relative">
-            <div class="stardiv">
+       <!-- Section Title -->
+        <div class="td_section_heading td_style_1 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+            <p class="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color">
+                <i></i> Our Expert Counsellors <i></i>
+            </p>
+            <h2 class="td_section_title td_fs_48 mb-0">Top-Tier Counsellors at Your Service</h2>
+            <p class="td_section_subtitle td_fs_18 mb-0">Our instructors are accomplished professionals in their fields, specializing in technology, business, design, and marketing.</p>
+        </div>
+
+        <div class="td_height_50 td_height_lg_50"></div>
+      <div class="td_tabs td_style_1">
+
+
+        <div class="td_height_50 td_height_lg_50"></div>
+        <div class="td_tab_body">
+          <div class="td_tab active" id="td_tab_1">
+            <div class="row td_gap_y_30 td_row_gap_30">
+
+                <div class="col-lg-3 col-md-6  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="td_card td_style_5 td_type_1">
+                  <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="online-mba.html" class="td_card_thumb">
+                
+                  
+                  <div class="td_card_content">
+                    <div class="stardiv">
+              <img src="assets/img/star.png" class="img-fluid"> <a>4.7</a>
+            </div>
+            
+            <img src="assets/img/home_2/tutor.jpg"  alt="" class="w-100 td_radius_10" >
+            <div class="td_team_info td_white_bg">
+              <h6 class="td_team_member_title td_fs_16 td_semibold mb-0 mb-1" style="text-align: left;">Mr. Leslie Alexander</h6>
+              <p class="td_team_member_designation mb-0 td_fs_14 td_opacity_7 td_heading_color mb-1" style="text-align: left;">Sr.Mentor MBA</p>
+            </div>
+             <div class="td_card_btns_wrap mt-3">
+             
+                 
+                      <!-- <span class="td_fs_18 td_medium td_heading_color">Robert Anderson</span> -->
+                    </div>
+                 <div class="td_card_btns_wrap mt-3">
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="td_btn td_style_1 td_type_3 td_radius_30 td_medium td_fs_14">
+                        <span class="td_btn_in td_accent_color">
+                          <span>Consult</span>
+                        </span>
+                      </a>
+                 
+                      <!-- <span class="td_fs_18 td_medium td_heading_color">Robert Anderson</span> -->
+                    </div>
+
+                    
+                  </div>
+                  </a>
+                </div>
+               
+              </div>
+
+
+              <div class="col-lg-3 col-md-6  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="td_card td_style_5 td_type_1">
+                  <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="online-mba.html" class="td_card_thumb">
+                
+                  
+                  <div class="td_card_content">
+                    <div class="stardiv">
               <img src="assets/img/star.png" class="img-fluid"> <a>4.5</a>
             </div>
             
-            <img src="assets/img/home_2/team_member_1.jpg" alt="" class="w-100 td_radius_10">
-            <div class="td_team_info td_white_bg">
-              <h3 class="td_team_member_title td_fs_18 td_semibold mb-0">Mr. Lucas Johans</h3>
-              <p class="td_team_member_designation mb-0 td_fs_14 td_opacity_7 td_heading_color">Sr.Mentor MBA</p>
+            <img src="assets/img/home_2/team_member_122.jpg" alt="" class="w-100 td_radius_10">
+                 <div class="td_team_info td_white_bg">
+              <h6 class="td_team_member_title td_fs_16 td_semibold mb-0 mb-1" style="text-align: left;">Mr. Lucas Johans</h6>
+              <p class="td_team_member_designation mb-0 td_fs_14 td_opacity_7 td_heading_color mb-1" style="text-align: left;">Sr.Mentor BBA</p>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-          <div class="td_team td_style_1 text-center position-relative">
-            <div class="stardiv">
+             <div class="td_card_btns_wrap mt-3">
+             
+                 
+                      <!-- <span class="td_fs_18 td_medium td_heading_color">Robert Anderson</span> -->
+                    </div>
+                 <div class="td_card_btns_wrap mt-3">
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="td_btn td_style_1 td_type_3 td_radius_30 td_medium td_fs_14">
+                        <span class="td_btn_in td_accent_color">
+                          <span>Consult</span>
+                        </span>
+                      </a>
+                 
+                      <!-- <span class="td_fs_18 td_medium td_heading_color">Robert Anderson</span> -->
+                    </div>
+
+
+                    
+                  </div>
+                  </a>
+                </div>
+               
+              </div>
+               
+                <div class="col-lg-3 col-md-6  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="td_card td_style_5 td_type_1">
+                  <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="online-mba.html" class="td_card_thumb">
+                
+                  
+                  <div class="td_card_content">
+                    <div class="stardiv">
               <img src="assets/img/star.png" class="img-fluid"> <a>4.5</a>
             </div>
-            <img src="assets/img/home_2/team_member_2.jpg" alt="" class="w-100 td_radius_10">
-            <div class="td_team_info td_white_bg">
-              <h3 class="td_team_member_title td_fs_18 td_semibold mb-0">Leslie Alexander</h3>
-              <p class="td_team_member_designation mb-0 td_fs_14 td_opacity_7 td_heading_color">Sr.Mentor BBA</p>
+            
+            <img src="assets/img/home_2/mba-female-student-formals-rich-260nw-2574400481.png" alt="" class="w-100 td_radius_10">
+                  <div class="td_team_info td_white_bg">
+              <h6 class="td_team_member_title td_fs_16 td_semibold mb-0 mb-1" style="text-align: left;">Mr. Lucas Johans</h6>
+              <p class="td_team_member_designation mb-0 td_fs_14 td_opacity_7 td_heading_color mb-1" style="text-align: left;">Sr.Mentor MCA</p>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.35s">
-          <div class="td_team td_style_1 text-center position-relative">
-            <div class="stardiv">
-              <img src="assets/img/star.png" class="img-fluid"> <a>4.5</a>
+             <div class="td_card_btns_wrap mt-3">
+             
+                 
+                      <!-- <span class="td_fs_18 td_medium td_heading_color">Robert Anderson</span> -->
+                    </div>
+                 <div class="td_card_btns_wrap mt-3">
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="td_btn td_style_1 td_type_3 td_radius_30 td_medium td_fs_14">
+                        <span class="td_btn_in td_accent_color">
+                          <span>Consult</span>
+                        </span>
+                      </a>
+                 
+                      <!-- <span class="td_fs_18 td_medium td_heading_color">Robert Anderson</span> -->
+                    </div>
+
+                 
+
+                    
+                  </div>
+                  </a>
+                </div>
+               
+              </div>
+               <div class="col-lg-3 col-md-6  wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="td_card td_style_5 td_type_1">
+                  <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="online-mba.html" class="td_card_thumb">
+                
+                  
+                  <div class="td_card_content">
+                    <div class="stardiv">
+              <img src="assets/img/star.png" class="img-fluid"> <a>4.3</a>
             </div>
-            <img src="assets/img/home_2/team_member_1.jpg" alt="" class="w-100 td_radius_10">
-            <div class="td_team_info td_white_bg">
-              <h3 class="td_team_member_title td_fs_18 td_semibold mb-0">Darrell Steward</h3>
-              <p class="td_team_member_designation mb-0 td_fs_14 td_opacity_7 td_heading_color">Sr.Mentor MCA</p>
+            
+            <img src="assets/img/home_2/team_member_312.jpg" alt="" class="w-100 td_radius_10">
+                 <div class="td_team_info td_white_bg">
+              <h6 class="td_team_member_title td_fs_16 td_semibold mb-0 mb-1" style="text-align: left;">Mr. Darrell Steward</h6>
+              <p class="td_team_member_designation mb-0 td_fs_14 td_opacity_7 td_heading_color mb-1" style="text-align: left;">Sr.Mentor MBA</p>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-          <div class="td_team td_style_1 text-center position-relative">
-            <div class="stardiv">
-              <img src="assets/img/star.png" class="img-fluid"> <a>4.5</a>
-            </div>
-            <img src="assets/img/home_2/team_member_2.jpg" alt="" class="w-100 td_radius_10">
-            <div class="td_team_info td_white_bg">
-              <h3 class="td_team_member_title td_fs_18 td_semibold mb-0">Leslie Alexander</h3>
-              <p class="td_team_member_designation mb-0 td_fs_14 td_opacity_7 td_heading_color">Sr.Mentor MBA</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="td_height_60 td_height_lg_40"></div>
-      <div class="text-center wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s">
-        <a href="#" class="td_btn td_style_1 td_radius_30 td_medium">
+             <div class="td_card_btns_wrap mt-3">
+             
+                 
+                      <!-- <span class="td_fs_18 td_medium td_heading_color">Robert Anderson</span> -->
+                    </div>
+                 <div class="td_card_btns_wrap mt-3">
+                      <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="td_btn td_style_1 td_type_3 td_radius_30 td_medium td_fs_14">
+                        <span class="td_btn_in td_accent_color">
+                          <span>Consult</span>
+                        </span>
+                      </a>
+                 
+                      <!-- <span class="td_fs_18 td_medium td_heading_color">Robert Anderson</span> -->
+                    </div>
+
+                 
+
+                    
+                  </div>
+                  </a>
+                </div>
+               
+              </div>
+              
+       
+            
+
+               <div class="text-center">
+        <a href="colleges.html" class="td_btn td_style_1 td_radius_10 td_medium">
           <span class="td_btn_in td_white_color td_accent_bg">
-            <span>See All Counseller</span>
+            <span>View All</span>
             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.1575 4.34302L3.84375 15.6567" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round"></path>
@@ -1370,9 +1588,33 @@
           </span>
         </a>
       </div>
-    </div>
-    <div class="td_height_120 td_height_lg_80"></div>
+             
+
+           
+
+             
+
+
+          
+
+
+
+
+
+            </div>
+          </div><!-- .td_tab_item -->
+   
+
+
+
+
+          <div class="td_height_50 td_height_lg_40"></div>
   </section>
+
+
+
+
+
 
   <section class="td_heading_bg td_hobble success-stories">
     <div class="td_height_50 td_height_lg_40"></div>
@@ -1591,7 +1833,7 @@
               <img src="assets/img/home_3/funfact_icon_2.svg" alt="">
             </div>
             <div class="td_funfact_right">
-              <h3 class="td_fs_36 td_white_color mb-0"><span class="odometer" data-count-to="10000"></span>+</h3>
+              <h3 class="td_fs_36 td_white_color mb-0"><span class="odometer" data-count-to="60000"></span>+</h3>
               <p class="mb-0 td_white_color ">Students Counselled</p>
             </div>
           </div>
@@ -1963,7 +2205,7 @@
       <div class="td_footer_row">
         <div class="td_footer_col">
           <div class="td_footer_widget">
-            <div class="td_footer_text_widget td_fs_18">
+            <div class="td_footer_text_widget td_fs_16">
               <img src="assets/img/foot-logo.png">
               <p>SimpliDegree is an innovative online learning platform that provides industry-relevant certification
                 and degree programs in collaboration with top universities and institutions. It aims to bridge the gap
@@ -2200,6 +2442,22 @@
   <script src="assets/js/jquery-ui.min.js"></script>
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".numboxes .item");
+
+    items.forEach(item => {
+        item.addEventListener("click", function () {
+            let currentValue = parseInt(this.textContent, 10);
+            this.textContent = currentValue + 1;
+        });
+    });
+});
+
+  </script>
+  <script>
+    document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
+  </script>
 </body>
 
 
